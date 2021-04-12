@@ -15,10 +15,10 @@ MODULE_NAME := mt7601u
 CFLAGS_trace.o := -I$(src)
 
 all:
-	make -C /lib/modules/$(KVER)/build M=$(PWD) modules
+	make -C /lib/modules/$(KVER)/build M=$(shell pwd) modules
  
 clean:
-	make -C /lib/modules/$(KVER)/build M=$(PWD) clean
+	make -C /lib/modules/$(KVER)/build M=$(shell pwd) clean
 
 install:
 	mkdir -p -m 644 $(MODDESTDIR)mediatek/mt7601u
