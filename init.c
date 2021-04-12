@@ -607,7 +607,6 @@ int mt7601u_register_device(struct mt7601u_dev *dev)
 
 	wiphy->features |= NL80211_FEATURE_ACTIVE_MONITOR | NL80211_FEATURE_AP_SCAN;
 	wiphy->interface_modes = BIT(NL80211_IFTYPE_STATION) | BIT(NL80211_IFTYPE_AP) | BIT(NL80211_IFTYPE_MONITOR);
-	wiphy->software_iftypes = BIT(NL80211_IFTYPE_STATION) | BIT(NL80211_IFTYPE_AP) | BIT(NL80211_IFTYPE_MONITOR);
 
 	wiphy_ext_feature_set(wiphy, NL80211_EXT_FEATURE_CQM_RSSI_LIST);
 
